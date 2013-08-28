@@ -1228,6 +1228,8 @@ class LDAPUserFolder(BasicUserFolder):
                 f_template = '(&(objectClass=%s)(%s=%s))'
                 group_filter = '(|'
 
+                dn=dn.replace('uid=','').replace(','+self.users_base,'')
+
                 for g_name, m_name in GROUP_MEMBER_MAP.items():
                     fltr = filter_format(f_template, (g_name, m_name, dn))
                     group_filter += fltr

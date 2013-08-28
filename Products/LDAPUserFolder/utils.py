@@ -47,6 +47,7 @@ GROUP_MEMBER_MAP = { 'groupOfUniqueNames' : 'uniqueMember'
                    , 'accessGroup' : 'member'
                    , 'group' : 'member'
                    , 'univentionGroup' : 'uniqueMember'
+                   , 'posixGroup' : 'memberUid'
                    }
 
 GROUP_MEMBER_ATTRIBUTES = Set(list(GROUP_MEMBER_MAP.values()))
